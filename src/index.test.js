@@ -9,7 +9,7 @@ describe('check ahv13 validity',  ()  => {
 
     it('should return that the sample case is valid',  () =>  {
         const ahv13validator = new AHV13();
-       const ahv13number = '756.9217.0769.85';
+        const ahv13number = '756.9217.0769.85';
         const expected = true;
         const actual =ahv13validator.isValid(ahv13number);
         assert.equal(actual, expected);

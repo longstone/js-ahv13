@@ -11,12 +11,20 @@ describe('calculate the checksum', () => {
         assert.equal(ahv13validator.checkSum(ahv12number), 5);
     });
 
+
 });
 describe('check ahv13 validity',  ()  => {
 
-    it('should return that the sample case is valid',  () =>  {
+    it('should return that "756.9217.0769.85" is valid',  () =>  {
         const ahv13validator = new AHV13();
         const ahv13number = '756.9217.0769.85';
+        const expected = true;
+        const actual =ahv13validator.isValid(ahv13number);
+        assert.equal(actual, expected);
+    });
+    it('should return that "756.1234.5678.97" is valid',  () =>  {
+        const ahv13validator = new AHV13();
+        const ahv13number = '756.1234.5678.97';
         const expected = true;
         const actual =ahv13validator.isValid(ahv13number);
         assert.equal(actual, expected);

@@ -4,7 +4,7 @@
   "description": "Validates the AHV 13 Number (swiss social security number)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha-webpack --webpack-config webpack.config-test.babel.js \"src/**/*.test.js\"",
+    "test": "grunt test",
     "test-watch": "mocha-webpack --webpack-config webpack.config-test.babel.js \"src/**/*.test.js\" --watch",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --colors"
   },
@@ -26,10 +26,18 @@
     "babel-preset-es2015": "^6.22.0",
     "cross-env": "^3.2.3",
     "file-loader": "^0.10.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-check-dependencies": "^1.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-mocha-istanbul": "^3.0.1",
+    "grunt-mocha-test": "~0.12.7",
+    "istanbul": "^0.4.0",
+    "load-grunt-tasks": "^3.5.2",
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
-    "source-map-support": "^0.4.11",
-    "webpack": "^2.2.1",
-    "webpack-node-externals": "^1.5.4"
+    "source-map-support": "^0.4.11"
   }
 }

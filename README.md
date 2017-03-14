@@ -7,3 +7,6 @@ The SSN can be passed with or without dots.
 const ahv13validator = new AHV13();
 const isValid = ahv13validator.isValid('756.9217.0769.85');`
 ```
+## sample
+
+npm install ahv13-validator

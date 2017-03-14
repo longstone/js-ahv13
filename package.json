@@ -8,10 +8,6 @@
     "test-watch": "mocha-webpack --webpack-config webpack.config-test.babel.js \"src/**/*.test.js\" --watch",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --colors"
   },
-  "engines": {
-    "node": "6.5.0",
-    "npm": "4.0.5"
-  },
   "repository": {
     "type": "git",
     "url": "todo"

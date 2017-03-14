@@ -8,5 +8,19 @@ const ahv13validator = new AHV13();
 const isValid = ahv13validator.isValid('756.9217.0769.85');`
 ```
 ## sample
+add ahv13
 
-npm install ahv13-validator
+`npm install --save ahv13-validator` or `yarn add ahv13-validator`
+lets start
+```
+ /**
+  * Created by longstone on 14.03.17.
+  */
+ 
+ const Validator13 = require('ahv13-validator');
+ const ahv13 = new Validator13();
+ 
+ 
+ console.log('5==',ahv13.checkSum('756.9217.0769.8'));
+ console.log('true==',ahv13.isValid('756.9217.0769.85'));
+ ```

@@ -3,8 +3,15 @@
  */
 const assert = require("assert");
 const AHV13 = require('./index');
+describe('calculate the checksum', () => {
+    it('should calculate the checksum for the example case', () => {
+        const ahv13validator = new AHV13();
+        // const ahv13number = '7569217076985';
+        const ahv12number = '756921707698';
+        assert.equal(ahv13validator.checkSum(ahv12number), 5);
+    });
 
-
+});
 describe('check ahv13 validity',  ()  => {
 
     it('should return that the sample case is valid',  () =>  {
@@ -25,6 +32,7 @@ describe('check ahv13 validity',  ()  => {
         assert.equal(actual, expected);
         assert.equal(actualDotted, expected);
     });
+
     it('should fail if the sample  is invalid',  () =>  {
         const ahv13validator = new AHV13();
        const ahv13number = '756.9217.0769.83';
@@ -32,8 +40,5 @@ describe('check ahv13 validity',  ()  => {
         const actual =ahv13validator.isValid(ahv13number);
         assert.equal(actual, expected);
     });
-
-
-
 
 });

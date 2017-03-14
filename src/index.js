@@ -3,27 +3,32 @@ class ValidatorAHV13 {
     constructor() {
     }
 
-    _removeDots(ahv13){
-        return ahv13.split('.').join("");
-    }
 
-    /**
-     * AHV Number in reversed order, without checksum
-     * @param ahv12
-     * @returns {number}
-     * @private
-     */
-    calculateCheckSum(ahv12){
-        let totalChecksum=0;
-        for(let i = 0; i<ahv12.length;i++){
+    _calculateCheckSum(ahv12) {
+        let totalChecksum = 0;
+        for (let i = 0; i < ahv12.length; i++) {
             const number = ahv12[i];
-            if(i%2===0){
+            if (i % 2 === 0) {
                 totalChecksum = totalChecksum + 13 * number;
-            }else{
+            } else {
                 totalChecksum = totalChecksum + number;
             }
         }
-        return totalChecksum % 10;
+        const nextTimesTen = Math.ceil(totalChecksum / 10) * 10;
+        return nextTimesTen - totalChecksum;
+    }
+
+    _preProcessArray(arr){
+       return arr.split('.').join('').split('').reverse().map( number => parseInt(number));
+    }
+    /**
+     * AHV Number without last number, like: ('756.9217.0769.85')
+     * @param ahv12
+     * @returns {number} for this case 5
+     * @private
+     */
+    checkSum(ahvnumber){
+     return this._calculateCheckSum(this._preProcessArray(ahvnumber));
     }
 
     /**
@@ -32,10 +37,10 @@ class ValidatorAHV13 {
      * @returns {boolean}
      */
     isValid(ahv13) {
-        const cleanedAHV13 = this._removeDots(ahv13);
-        const ahvArray = cleanedAHV13.split('').reverse().map( number => parseInt(number));
+        const ahvArray = this._preProcessArray(ahv13);
         const check = ahvArray.shift();
-        return this.calculateCheckSum(ahvArray)  === check;
+        const checkSum = this._calculateCheckSum(ahvArray);
+        return this._calculateCheckSum(ahvArray) === check;
     }
 }
 module.exports = ValidatorAHV13;

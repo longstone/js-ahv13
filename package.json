@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "grunt test",
-    "test-watch": "mocha-webpack --webpack-config webpack.config-test.babel.js \"src/**/*.test.js\" --watch",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --colors"
+    "build": "grunt"
   },
   "repository": {
     "type": "git",
-    "url": "todo"
+    "url": "https://github.com/longstone/js-ahv13.git"
   },
   "keywords": [
     "AHV13",

@@ -22,6 +22,13 @@ describe('check ahv13 validity',  ()  => {
         const actual =ahv13validator.isValid(ahv13number);
         assert.equal(actual, expected);
     });
+    it('should return that "756.3047.5009.62" is valid',  () =>  {
+        const ahv13validator = new AHV13();
+        const ahv13number = '756.3047.5009.62';
+        const expected = true;
+        const actual =ahv13validator.isValid(ahv13number);
+        assert.equal(actual, expected);
+    });
     it('should return that "756.1234.5678.97" is valid',  () =>  {
         const ahv13validator = new AHV13();
         const ahv13number = '756.1234.5678.97';

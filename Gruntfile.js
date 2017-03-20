@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             watch: {
                 scripts: {
                     files: ['./src/**/*.js'],
-                    tasks: ['test'],
+                    tasks: ['test','babel'],
                     options: {
                         spawn: false
                     }
@@ -20,7 +20,8 @@ module.exports = function (grunt) {
             },
             babel: {
                 options: {
-                    sourceMap: true
+                    sourceMap: true,
+                    presets: ['es2015']
                 },
                 dist: {
                     files: {
@@ -51,8 +52,9 @@ module.exports = function (grunt) {
             }
         }
     );
-
-    grunt.registerTask('default', ['checkDependencies', 'babel:dist']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-babel');
+    grunt.registerTask('default', ['checkDependencies', 'babel']);
     grunt.registerTask('test', ['checkDependencies', 'babel', 'mocha_istanbul']);
 
 };

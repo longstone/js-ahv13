@@ -22,7 +22,7 @@ class ValidatorAHV13 {
        return arr.split('.').join('').split('').reverse().map( number => parseInt(number));
     }
     /**
-     * AHV Number without last number, like: ('756.9217.0769.85')
+     * AHV Number without last number, like: ('756.9217.0769.8')
      * @param ahv12
      * @returns {number} for this case 5
      * @private

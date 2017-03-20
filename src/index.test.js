@@ -1,16 +1,18 @@
-/**
- * Created by longstone on 13.03.17.
- */
-const assert = require("assert");
+const assert = require('assert');
 const AHV13 = require('./index');
 describe('calculate the checksum', () => {
-    it('should calculate the checksum for the example case', () => {
+    it('should calculate the checksum for the example case 7569217076985', () => {
         const ahv13validator = new AHV13();
         // const ahv13number = '7569217076985';
         const ahv12number = '756921707698';
         assert.equal(ahv13validator.checkSum(ahv12number), 5);
     });
 
+    it('should calculate the checksum for the example case 756.3047.5009.62', () => {
+        const ahv13validator = new AHV13();
+        const ahv12number = '756.3047.5009.6';
+        assert.equal(ahv13validator.checkSum(ahv12number), 2);
+    });
 
 });
 describe('check ahv13 validity',  ()  => {

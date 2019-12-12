@@ -239,7 +239,7 @@ babel-code-frame@^6.16.0, babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-core@^6.0.12, babel-core@^6.22.1, babel-core@^6.26.0:
+babel-core@^6.22.1, babel-core@^6.26.0:
   version "6.26.3"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
   integrity sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA==
@@ -1841,12 +1841,10 @@ growl@1.10.5:
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.10.5.tgz#f2735dc2283674fa67478b10181059355c369e5e"
   integrity sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==
 
-grunt-babel@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/grunt-babel/-/grunt-babel-6.0.0.tgz#378189b487de1168c4c4a9fc88dd6005b35df960"
-  integrity sha1-N4GJtIfeEWjExKn8iN1gBbNd+WA=
-  dependencies:
-    babel-core "^6.0.12"
+grunt-babel@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-babel/-/grunt-babel-7.0.0.tgz#13c90c01f154dec214e0eeb5d66ac7c70cedf2d3"
+  integrity sha512-AFilvH/iPbnIYhL4Wx36AJQCaVEvK55xh0tujAt1DIM5tuxYxRsgUPEpwijBU147B+as/ssGuY9/6JYfTiAWpw==
 
 grunt-check-dependencies@^1.0.0:
   version "1.0.0"

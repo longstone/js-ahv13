@@ -17,7 +17,9 @@
   ],
   "author": "longstone <contact@longstone.ch>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "yarn": "^1.21.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.22.1",

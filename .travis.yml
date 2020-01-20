@@ -4,4 +4,11 @@ node_js:
   - "lts/*"
 before_script:
   - npm install -g grunt
-script: grunt
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Unit Tests"
+      script: grunt test
+    - stage: "Build"
+      name: "build"
+      script: grunt

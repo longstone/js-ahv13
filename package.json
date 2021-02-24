@@ -38,7 +38,6 @@
     "grunt-nyc-mocha": "0.0.9",
     "load-grunt-tasks": "^5.1.0",
     "mocha": "^8.3.0",
-    "nyc": "^15.1.0",
-    "release-it": "^14.4.1"
+    "nyc": "^15.1.0"
   }
 }

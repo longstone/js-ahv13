@@ -12,3 +12,11 @@ jobs:
     - stage: "Build"
       name: "build"
       script: grunt
+    - stage: "Release"
+      node_js: "lts/*"
+      deploy:
+        provider: releases
+        api_key: $NPM_API_KEY
+        script: npm publish --tag ${TRAVIS_TAG}
+        on:
+          tags: true

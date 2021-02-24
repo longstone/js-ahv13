@@ -30,15 +30,6 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            mochaTest: {
-                ci: {
-                    src: './src/**/*.test.js',
-                    options: {
-                        reporter: 'mocha-junit-reporter',
-                        captureFile: 'junit/test-results.xml'
-                    }
-                }
-            },
             nyc_mocha: {
                 target: {
                     src: './src/**/*.test.js',
@@ -52,6 +43,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-babel');
     grunt.registerTask('default', ['checkDependencies', 'babel']);
+    grunt.registerTask('build', ['checkDependencies', 'babel']);
     grunt.registerTask('test', ['checkDependencies', 'babel', 'nyc_mocha:target']);
 
 };

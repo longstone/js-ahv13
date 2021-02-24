@@ -18,17 +18,25 @@ class ValidatorAHV13 {
         return nextTimesTen - totalChecksum;
     }
 
-    _preProcessArray(arr){
-       return arr.split('.').join('').split('').reverse().map( number => parseInt(number));
-    }
     /**
-     * AHV Number without last number, like: ('756.9217.0769.8')
-     * @param ahv12
-     * @returns {number} for this case 5
+     * this will remove '.' and reverse the number
+     * @param arr
+     * @returns {*}
      * @private
      */
-    checkSum(ahvnumber){
-     return this._calculateCheckSum(this._preProcessArray(ahvnumber));
+    _preProcessArray(arr) {
+        return arr.split('.').join('').split('').reverse().map(number => parseInt(number));
+    }
+
+    /**
+     * AHV Number without last number, like: ('756.9217.0769.8')
+     * @param ahvNumber12
+     * @returns {int} checksum for this case 5
+     * @private
+     */
+    checkSum(ahvNumber12) {
+        const parsedNumber = this._preProcessArray(ahvNumber12);
+        return this._calculateCheckSum(parsedNumber);
     }
 
     /**
@@ -37,10 +45,12 @@ class ValidatorAHV13 {
      * @returns {boolean}
      */
     isValid(ahv13) {
-        const ahvArray = this._preProcessArray(ahv13);
-        const check = ahvArray.shift();
-        const checkSum = this._calculateCheckSum(ahvArray);
-        return this._calculateCheckSum(ahvArray) === check;
+        const reversedSSNArray = this._preProcessArray(ahv13);
+        // remove the first entry, as it is the checkusm
+        const checkSumSSN = reversedSSNArray.shift();
+        const checkSumCalculated = this._calculateCheckSum(reversedSSNArray);
+        return checkSumCalculated === checkSumSSN;
     }
 }
+
 module.exports = ValidatorAHV13;

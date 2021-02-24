@@ -21,7 +21,8 @@ module.exports = function (grunt) {
             babel: {
                 options: {
                     sourceMap: true,
-                    presets: ['es2015']
+                    presets: ['@babel/preset-env', 'minify'],
+                    comments: false
                 },
                 dist: {
                     files: {
@@ -38,13 +39,9 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            mocha_istanbul: {
-                coverage: {
-                    src: 'src',
-                    options: {
-                        mask: '*.test.js'
-
-                    }
+            nyc_mocha: {
+                target: {
+                    src: './src/**/*.test.js',
                 }
             },
             checkDependencies: {
@@ -55,6 +52,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-babel');
     grunt.registerTask('default', ['checkDependencies', 'babel']);
-    grunt.registerTask('test', ['checkDependencies', 'babel', 'mocha_istanbul']);
+    grunt.registerTask('test', ['checkDependencies', 'babel', 'nyc_mocha:target']);
 
 };

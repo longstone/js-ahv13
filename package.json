@@ -1,6 +1,6 @@
 {
   "name": "ahv13-validator",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "Validates the AHV 13 Number (swiss social security number)",
   "main": "index.js",
   "scripts": {

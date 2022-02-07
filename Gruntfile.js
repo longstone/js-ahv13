@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             watch: {
                 scripts: {
                     files: ['./src/**/*.js'],
-                    tasks: ['test','babel'],
+                    tasks: ['babel', 'nyc_mocha:target'],
                     options: {
                         spawn: false
                     }

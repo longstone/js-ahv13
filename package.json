@@ -17,14 +17,11 @@
   ],
   "author": "longstone <contact@longstone.ch>",
   "license": "ISC",
-  "dependencies": {
-    "yarn": "^1.22.10"
-  },
   "devDependencies": {
-    "@babel/core": "^7.13.1",
-    "@babel/preset-env": "^7.13.5",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.2.2",
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "babel-preset-minify": "^0.5.1",
     "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",
@@ -35,9 +32,10 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^24.0.0",
     "grunt-mocha-test": "0.13.3",
-    "grunt-nyc-mocha": "0.0.10",
+    "grunt-nyc-mocha": "1.0.0",
     "load-grunt-tasks": "^5.1.0",
-    "mocha": "^8.3.0",
-    "nyc": "^15.1.0"
+    "mocha": "9.2.0",
+    "nyc": "^15.1.0",
+    "webpack": "^5.68.0"
   }
 }

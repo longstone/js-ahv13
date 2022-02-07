@@ -46,6 +46,11 @@ class ValidatorAHV13 {
      */
     isValid(ahv13) {
         const reversedSSNArray = this._preProcessArray(ahv13);
+
+        if (reversedSSNArray.length !== 13) {
+          return false;
+        }
+
         // remove the first entry, as it is the checkusm
         const checkSumSSN = reversedSSNArray.shift();
         const checkSumCalculated = this._calculateCheckSum(reversedSSNArray);

@@ -65,4 +65,20 @@ describe('check ahv13 validity', () => {
         assert.equal(actual, expected);
     });
 
+    it('should fail with value "123" as it is invalid', () => {
+        const ahv13validator = new AHV13();
+        const ahv13number = '123';
+        const expected = false;
+        const actual = ahv13validator.isValid(ahv13number);
+        assert.equal(actual, expected);
+    });
+
+    it('should fail with value "1.2.3" as it is invalid', () => {
+        const ahv13validator = new AHV13();
+        const ahv13number = '1.2.3';
+        const expected = false;
+        const actual = ahv13validator.isValid(ahv13number);
+        assert.equal(actual, expected);
+    });
+
 });

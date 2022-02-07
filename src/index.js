@@ -3,7 +3,6 @@ class ValidatorAHV13 {
     constructor() {
     }
 
-
     _calculateCheckSum(ahv12) {
         let totalChecksum = 0;
         for (let i = 0; i < ahv12.length; i++) {
@@ -47,11 +46,12 @@ class ValidatorAHV13 {
     isValid(ahv13) {
         const reversedSSNArray = this._preProcessArray(ahv13);
 
+        // enforce length of 13
         if (reversedSSNArray.length !== 13) {
           return false;
         }
 
-        // remove the first entry, as it is the checkusm
+        // remove the first entry, as it is the checksum
         const checkSumSSN = reversedSSNArray.shift();
         const checkSumCalculated = this._calculateCheckSum(reversedSSNArray);
         return checkSumCalculated === checkSumSSN;

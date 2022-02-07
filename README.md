@@ -25,3 +25,24 @@ lets start
  console.log('5==',ahv13.checkSum('756.9217.0769.8'));
  console.log('true==',ahv13.isValid('756.9217.0769.85'));
  ```
+
+## dev
+
+This project uses grunt as runner.
+
+```
+npm ci
+grunt build
+grunt test
+```
+there is also a `grunt watch` to 
+
+
+
+### github actions local
+
+Pipeline local:
+
+```
+act
+```

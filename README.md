@@ -68,6 +68,11 @@ You can use `npm run watch:doc` to watch for files and build the documentation o
 TypeScript compiler.
 Changes to other files (`README.md`) will not cause a rebuild.*
 
+### Publish the documenation
+
+Documentation can be published on GitHub Pages by running
+`npm run doc && npm run doc:publish`.
+
 
 ### Testing GitHub Actions locally
 

@@ -1,0 +1,7 @@
+{
+    "entryPoints": ["src"],
+    "out": "build/docs",
+    "exclude": "**/*.spec.ts",
+    "json": "build/docs/typedoc.json",
+    "excludePrivate": true
+}

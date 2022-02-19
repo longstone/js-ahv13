@@ -1,4 +1,5 @@
-# js-ahv13
+# js-ahv13 ![ci](https://github.com/longstone/js-ahv13/actions/workflows/ci.yml/badge.svg) ![release](https://github.com/longstone/js-ahv13/actions/workflows/release.yml/badge.svg)
+
 
 ## About
 

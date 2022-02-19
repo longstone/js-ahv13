@@ -1,4 +1,5 @@
-# js-ahv13 ![ci](https://github.com/longstone/js-ahv13/actions/workflows/ci.yml/badge.svg) ![release](https://github.com/longstone/js-ahv13/actions/workflows/release.yml/badge.svg)
+# js-ahv13
+[![npm version](https://badge.fury.io/js/ahv13-validator.svg)](https://badge.fury.io/js/ahv13-validator) ![ci](https://github.com/longstone/js-ahv13/actions/workflows/ci.yml/badge.svg) ![release](https://github.com/longstone/js-ahv13/actions/workflows/release.yml/badge.svg) 
 
 
 ## About

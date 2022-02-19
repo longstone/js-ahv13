@@ -43,7 +43,7 @@ If you want to improve one of these images, your will need the following softwar
 
 - `node` (10 or higher) with `npm`
 
-You can then install the dependencies by running `npm install`.
+You can then install the dependencies by running `npm ci`.
 
 ### Test the code
 

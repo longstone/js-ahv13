@@ -85,3 +85,11 @@ Once installed just run `act` to run the pipeline locally.
 Here are a few etra links documenting how swiss social security number are checked:
 
 - [The AHV Number (in german, french or italian)](https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/ahv/grundlagen-gesetze/ahv-nummer.html)
+
+## KUDOS
+
+<a href="https://github.com/longstone/js-ahv13/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=longstone/js-ahv13" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).

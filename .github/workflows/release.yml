@@ -1,4 +1,4 @@
-name: Publish package to npmjs.org
+name: Publish to npmjs.org
 on:
   release:
     types: [created]

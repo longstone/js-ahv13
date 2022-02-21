@@ -84,7 +84,7 @@ Once installed just run `act` to run the pipeline locally.
 
 ## External links
 
-Here are a few etra links documenting how swiss social security number are checked:
+Here are a few extra links documenting how swiss social security number are checked:
 
 - [The AHV Number (in german, french or italian)](https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/ahv/grundlagen-gesetze/ahv-nummer.html)
 

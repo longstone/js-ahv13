@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/groovytron/ahv13-validator",
+  "repository": "https://github.com/longstone/js-ahv13",
   "license": "ISC",
   "keywords": [
     "AHV13",

@@ -71,7 +71,8 @@
     "build/module",
     "!**/*.spec.*",
     "!**/*.json",
-    "README.md"
+    "README.md",
+    "LICENSE",
   ],
   "prettier": {
     "singleQuote": true

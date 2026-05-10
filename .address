@@ -1,0 +1,10 @@
+{
+  "name": "default",
+  "status": "Running",
+  "arch": "aarch64",
+  "cpus": 2,
+  "memory": 2147483648,
+  "disk": 107374182400,
+  "address": "192.168.64.2",
+  "runtime": "docker"
+}

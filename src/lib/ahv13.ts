@@ -9,16 +9,17 @@ export class AHV13 {
    * @param ahv12 - Social security number **without its checksum** (aka AHV12)
    * @returns The social security number's checksum
    */
-  private calculateCheckSum(ahv12: number[]) {
+  private calculateCheckSum(ahv12: number[]): number {
     let totalChecksum = 0;
-    for (let i = 0; i < ahv12.length; i++) {
-      const number = ahv12[i];
-      if (i % 2 === 0) {
-        totalChecksum = totalChecksum + 13 * number;
+
+    for (const [index, digit] of ahv12.entries()) {
+      if (index % 2 === 0) {
+        totalChecksum = totalChecksum + 13 * digit;
       } else {
-        totalChecksum = totalChecksum + number;
+        totalChecksum = totalChecksum + digit;
       }
     }
+
     const nextTimesTen = Math.ceil(totalChecksum / 10) * 10;
     return nextTimesTen - totalChecksum;
   }
@@ -32,11 +33,11 @@ export class AHV13 {
    */
   private preProcessArray(arr: string): number[] {
     return arr
-      .split('.')
-      .join('')
-      .split('')
+      .split(".")
+      .join("")
+      .split("")
       .reverse()
-      .map((number) => parseInt(number));
+      .map((number) => Number.parseInt(number, 10));
   }
 
   /**
